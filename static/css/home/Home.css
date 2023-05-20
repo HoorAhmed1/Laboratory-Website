@@ -1,0 +1,149 @@
+
+*{
+    padding : 0 ;
+    margin : 0;
+}
+body{
+    background-color: #FBFCF8;
+}
+a{
+    text-decoration: none;
+    color: black; 
+}
+a:hover{
+    font-weight: 500;
+}
+nav{
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245);
+
+    }
+nav ul{
+    display: flex;
+    list-style: none;
+}
+.nav logo{
+    position: absolute;
+    right: 0;
+}
+.navUL a:hover {
+    font-weight: 900;
+    transition: 0.25s;
+}
+.navUL li{
+    margin: 12px;
+    display: flex;
+    align-items: center;
+}
+.sign{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.sign a{
+    color:white;
+}
+.sign button:hover{
+    background-color: #c8d9ed;
+    transition: 0.25s
+}
+
+.sign button{
+    margin: 0 10px;
+    padding: 7px;
+    background-color: #03254E;
+    /* color: white; */
+    font-size: 14px;
+    border: none;
+}
+#sideBar{
+    padding:10px;
+    position:fixed;
+    float: right;
+    right:0%;
+    display:none;
+    line-height: 60px;
+    background-color: #5d548a;
+    width: 125px;
+    font-size: x-large;
+    flex-direction: column;
+    text-align: center;            
+}
+#sideBar a{
+    color: white;
+}
+
+
+/*#sideNav{
+    display: flex;
+    width: 18%;
+    height: 100%
+}*/ 
+
+
+#sideBar p:hover {
+    background-color: #a2b6cd;
+    /* color: white; */
+    transition: 0.25s;
+}
+
+
+.home{
+    /*float:left;*/
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+.Image img{
+    margin-top: 80px;
+    /* margin-left: 80;
+    margin-right:0px; */
+    border-top-left-radius: 60%;
+    border-bottom-left-radius : 60%;
+    transform: translate(45px, 45px);
+    background-color: #eaf2fa;
+    display: flex;
+    
+}
+body{
+    font-family: 'Oxygen', sans-serif;
+}
+#paragraph h1{
+    color: darkslategray;
+}
+#paragraph h2{
+    color:darkslategrey;
+}
+.join{
+    border-radius: 100px;
+    padding: 7px;
+    background-color: #FF6469;
+    font-size: 23px;
+    border: none;
+}
+.join a{
+    color: white;
+}
+#barIcon{
+    height: 50px;
+    width: 50px;
+    right: 30px;
+}
+
+#logoPic img{
+    width: 200px;
+    height: 50px;
+
+}
+#paragraph{
+    margin-top:5%;
+    
+}
+#navSearch{
+    font-size: 14px;
+    height: 20px;
+}

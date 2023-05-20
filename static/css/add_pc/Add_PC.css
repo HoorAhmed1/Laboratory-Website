@@ -1,0 +1,37 @@
+#cenDiv{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    display: flex;
+}
+#cenDiv img{
+    float: right;
+    height: 650px;
+    width: 700px;
+}
+#cenDiv h1{
+    margin-top: 40px;
+}
+#cenDiv > div{
+    margin-top: 50px;
+    font-size: 20px;
+}
+.MyButtons{
+    width: 50px;
+    height: 25px;
+}
+#repaired{
+    margin-left: 37px;
+}
+#status{
+    font-size: 20px;
+}
+.label1{
+    display: inline-block;
+    width: 220px;
+    text-align: left;
+}
+#Pc_id, #lab_id{
+    width: 200px;
+}

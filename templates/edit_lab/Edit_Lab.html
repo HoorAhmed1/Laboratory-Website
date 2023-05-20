@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang = "en">
+
+    <head>
+
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/edit_lab/Edit_Lab.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home/Home.css' %}">
+        <!-- <link rel="stylesheet" href="../css_files/Sign_In.css"> -->
+        <title> update and delete lab </title>
+
+    </head>
+
+    <body  >
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap" rel="stylesheet">
+
+ 
+        <nav>
+            <div id="logoPic">
+                <img src="{% static 'photos/logo.svg' %}"
+                height="60" width="70">
+                <!-- Computer Labs -->
+            </div>
+            
+            <ul class="navUL">
+                <li><a href="{% url 'search' %}">Search</a></li>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                
+                <!-- <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li> -->
+                <li><a href="mailto:hourahmed112@gmail.com">Contact Us</a></li>
+            </ul> 
+            <!-- <div class="sign">
+                <input type="text" placeholder="Search Labs" id="navSearch">
+                <button >
+                    <a href="#">Sign Up</a></p>
+                </button>
+                <button>
+                     <p><a href="#" class="s" onclick="openForm()">Sign In</a></p> -->
+                    <!-- <a href="#"> Sign In </a>
+                </button>
+            </div> -->
+            
+            
+            <button id="barIcon"><img src="{% static 'photos/bars.svg' %}"></button>   
+        </nav>
+
+
+        <div class="home">
+            <div class="sideNav" id="sideNav">
+                 
+                <!-- <div id= showButton><img src="../images/showArrow.svg"> <title>show sidebar</title></div> -->
+                <div id="sideBar">
+                    <p><a href="{% url 'reportpc' %}">Report PC</a></p>
+                    <hr>
+                    <p><a href="{% url 'add pc' %}">Add PC</a></p>
+                    <hr>
+        
+                    <p><a href="{% url 'add lab' %}">Add Lab</a></p>
+                    <hr>
+                    <p><a href="{% url 'search' %}">Search</a></p>
+                    <hr>
+                    <p ><a href="{% url 'pcrepair' %}">PC Repair</a></p>
+                    <hr>
+                    <p><a href="{% url 'editlab' %}">Edit Lab</a></p>
+                    
+                </div>
+                <!-- <div id= hideButton><img src="../images/arrow.svg"><title>hideButton sidebar</title></div> -->
+                
+            </div>
+        </div>
+
+            
+             <!-- <div class="form-popup" id="myForm">
+                <form name="form1"  action="/action_page.php" class="form-container">
+
+                    <h1>Sign In</h1>
+              
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email"  id="e"  name='text1' required>
+                
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                
+                    <button  onclick="ValidateEmail(document.form1.text1)" class="btn">Login</button>
+                    
+                    <input type="checkbox" checked="checked"id="ch" value="Remember" name="remember"> remember
+                    
+                  
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    <div id="message">
+                        <h3>Password must contain the following:</h3>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                    </div>
+                </form>
+            </div>    -->
+              
+            
+            
+        
+
+        <center>
+
+            <form>
+
+                <br> 
+                <h1> Update Lab </h1> 
+                
+                <table  id="tab" cellpadding="20" cellspacing="20" >
+                    <center> <img id="image" src=" https://cdn-icons-png.flaticon.com/128/3768/3768946.png" alt=" icon computer"></center>
+
+                    <tr>
+                        <td class="row">
+                        Lab name
+                        </td>
+                        <td>
+                            <input required type="text" id="textname" autofocus placeholder="Enter lab name" name="lab name" size="30">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        
+                        <td class="row" >
+                        Lab ID
+                        </td>
+                        <td>
+                            <input required type="number" id="ID" min="1" placeholder="Enter Lab ID" name="lab ID" size="30">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="row" >
+                        Building number
+                        </td>
+                        <td>
+                            <input required type="number" id="buldingnum" min="1" placeholder="Enter building number" name="building number" size="30">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="row" >
+                        Floor number
+                        </td>
+                        <td>
+                            <input required type="number" min="1" id="floornum" placeholder="Enter floor number" name="floor number" size="30">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td  class="row">
+                        Number of PCs
+                        </td>
+                        <td>
+                            <input required type="number" min="1"  id="pcnum" placeholder="Enter PCs number" name="number of PCs" size="30">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td  class="row" >
+                        number of chairs
+                        </td>
+
+                        <td>
+                            <input required type="number" min="1" id="chairnum" placeholder="Enter chairs number" name="number of chairs" size="30">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td  class="row"  >
+                        lab capacity
+                        </td>
+                        <td>
+                            <input required type="number" min="1" id="cap" placeholder="Enter Capacity" name="lab capacity" size="30">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="row" >
+                        Statues
+                        </td>
+
+                        <td>
+                            <input type="radio" name="statues" value="active" id="active statues" size="30">
+                            <label for="active statues">Active</label>
+                            <input type="radio" name="statues" value="under maintance" id="u_maintance" size="30">
+                            <label for="u_maintance">Under maintance</label>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <button  class="button" type="reset"> Reset </button>
+                        </td>
+
+                        <td>
+                            <button id="up" type="submit" class="button" onclick="checkempty();"> Update </button>
+                            <button class="button" onclick="deleterow();">Delete </button>
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </form>
+
+        </center>
+
+        <!-- <button class="open-button" onclick="openForm()">Open Form</button> -->
+
+        
+        <!-- <script src="../js_files/Sign_In.js"></script> -->
+        <script src="{% static 'js/edit_lab/Edit_Lab.js' %}"></script>
+        <script src="{% static 'js/home/home.js' %}"></script>
+
+
+    </body>
+
+</html>

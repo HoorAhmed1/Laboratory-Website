@@ -1,0 +1,81 @@
+
+table{
+    
+    color:rgb(255, 255, 255);
+    background-color:rgb(24, 11, 82);
+    /* width: 50%; */
+    font-size: x-large;
+    font-style: oblique; 
+    font-weight: bold;
+    
+}
+#tableDiv{
+    width:100% ;
+    justify-content: center;
+    display:flex;
+    
+
+}
+
+
+.r{
+    color:rgb(20, 6, 54);
+    background-color:whitesmoke;
+    font-size: xx-large;
+    font-style: oblique; 
+}
+
+a:link{
+    color: #2a2b29;
+}
+a:visited{
+    color: #130324;
+}
+a:hover {
+    color: #19097f;
+    }
+    a:active {
+        color: #1a084b;
+        }
+.button
+{
+    box-sizing:border-box;
+    font-size: 16px;
+    background-color: #03254E;
+    color: azure;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #afe304; 
+    transition-duration: 0.4s;
+    /* border-radius: 50%; */
+}
+.button:hover {
+    background-color: #10c7eb;
+    color: white;
+  }
+  input[type=text] {
+    /* width: 50%; */
+    padding: 10px 10px;
+    margin: 4px 0;
+    box-sizing: border-box;
+  }
+  input[type=number] {
+    /* width: 50%; */
+    padding: 10px 10px;
+    margin: 4px 0;
+    box-sizing: border-box;
+  }
+  input[type=radio] {
+    /* width: 10%; */
+    padding: 10px 10px;
+    margin: 4px 0;
+    font-size: x-large;
+  }
+  tr{transition: all .25s ease-in-out;}
+  /* tr:hover{ cursor: pointer;background-color: rgb(228, 23, 112);} */
+#t td{
+    width:max-content;
+    
+}

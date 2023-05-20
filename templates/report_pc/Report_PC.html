@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Laboratory Tracking Website</title>
+    <meta name="description" content="Report a problem"/>
+    
+    <link rel="stylesheet" href="{% static 'css/report_pc/Report_PC.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home/Home.css' %}">
+
+</head>
+
+    <body>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap" rel="stylesheet">
+
+        <nav>
+            <div id="logoPic">
+                <img src="{% static 'photos/logo.svg' %}"
+                height="60" width="70">
+                <!-- Computer Labs -->
+            </div>
+            
+            <ul class="navUL">
+                <li><a href="{% url 'search' %}">Search</a></li>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                
+                <!-- <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li> -->
+                <li><a href="mailto:hourahmed112@gmail.com">Contact Us</a></li>
+            </ul> 
+            <!-- <div class="sign">
+                <input type="text" placeholder="Search Labs" id="navSearch">
+                <button >
+                    <a href="#">Sign Up</a></p>
+                </button>
+                <button>
+                     <p><a href="#" class="s" onclick="openForm()">Sign In</a></p> -->
+                    <!-- <a href="#"> Sign In </a>
+                </button>
+            </div> -->
+            
+            
+            <button id="barIcon"><img src="{% static 'photos/bars.svg' %}"></button>   
+        </nav>
+
+        <div class="home">
+
+                <div CLass="Problem">
+                    <form method="POST" onsubmit=" checkform();" name="problemForm" id ="problemForm">
+                        {% csrf_token %}
+                        <h1> Report a Problem in PC</h1> 
+                    
+                        <label><h3>Lab ID </h3></label> 
+                        <input required type="text"  id="LabID" name="labID" autofocus placeholder="enter the Laboratory ID"><br>
+
+                        <h3><label for="PCnumber">PC number</label></h3>
+                        <input required name= "pcID" type="number" min="1"  id="PCnumber"autofocus placeholder="enter number of PC"><br>
+                        <label for="Problem type"><h3>Choose a Problem </h3></label>
+
+                            <label for="Software1"> Software</label>
+                            <input type="radio" id="Software1" name="os" value="Software">
+                            <label for="Hardware1"> Hardware</label>
+                            <input type="radio" id="Hardware1" name="os" value="Hardware">
+                            
+                        <label><h3>Description of the problem</h3></label>
+                        <input name="Description" cols="20" rows="3" id="DescriptionOfProblem" maxlength="100" size="50"></input><br>
+
+                        <label><h3>Date of occurence</h3></label>
+                        <input required type="date" id="DateOfOccurence" name="date"><br><br>
+                        <button type="submit" id="Submuit" value="Submit" onclick="checkForm();"> Submit </button>
+
+                    </form>
+                    <!-- <div class="input-box">
+                        <label >Status <b>:</b></label>
+        
+                        <input id="active" type="radio" name="os" value="Active" >
+                        <label for="active">Active</label>
+                        
+                        <input id="inactive" type="radio" name="os" value="InActive" >
+                        <label for="inactive">InActive</label>
+                    </div> -->
+                
+                </div>
+            <img src="{% static 'photos/broken pc.svg' %}"
+                style="float:right;" height="700" width="700" alt="a pic">
+            <div class="sideNav" id="sideNav">
+                 
+                <!-- <div id= showButton><img src="../images/showArrow.svg"> <title>show sidebar</title></div> -->
+                <div id="sideBar">
+                    <p><a href="{% url 'reportpc' %}">Report PC</a></p>
+                    <hr>
+                    <p><a href="{% url 'add pc' %}">Add PC</a></p>
+                    <hr>
+        
+                    <p><a href="{% url 'add lab' %}">Add Lab</a></p>
+                    <hr>
+                    <p><a href="{% url 'search' %}">Search</a></p>
+                    <hr>
+                    <p ><a href="{% url 'pcrepair' %}">PC Repair</a></p>
+                    <hr>
+                    <p><a href="{% url 'editlab' %}">Edit Lab</a></p>
+                    
+                </div>
+                <!-- <div id= hideButton><img src="../images/arrow.svg"><title>hideButton sidebar</title></div> -->
+                
+            </div>
+        </div>
+
+        
+        <!-- <div class="form-popup" id="myForm">
+            <form name="form1"  action="/action_page.php" class="form-container">
+
+                <h1>Sign In</h1>
+          
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email"  id="e"  name='text1' required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            
+                <button  onclick="ValidateEmail(document.form1.text1)" class="btn">Login</button>
+                
+                <input type="checkbox" checked="checked"id="ch" value="Remember" name="remember"> remember
+                
+              
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+            </form>
+        </div>    -->
+
+        
+        <!-- <script src="../js_files/Sign_In.js"></script>    -->
+        <script src="{% static 'js/report_pc/Report_PC.js' %}"></script>
+        <script src="{% static 'js/home/home.js' %}"></script>
+</body>         
+</html>

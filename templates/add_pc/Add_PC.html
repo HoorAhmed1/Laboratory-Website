@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang = "en">
+
+    <head>
+
+        <title> Add a PC to a Laboratory </title>
+
+        
+
+        <meta charset = "UTF-8"/>
+        <meta name = "description" content = "Adding PC to a Laboratory"/>
+        <link rel="stylesheet" href="{% static 'css/add_pc/Add_PC.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home/Home.css' %}">
+        <!-- <link rel="stylesheet" href="../css_files/Sign_In.css"> -->
+        
+
+       
+    </head>
+
+    <body>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap" rel="stylesheet">
+
+ 
+        <nav>
+            <div id="logoPic">
+                <img src="{% static 'photos/logo.svg' %}"
+                height="60" width="70">
+                <!-- Computer Labs -->
+            </div>
+            
+            <ul class="navUL">
+                <li><a href="{% url 'search' %}">Search</a></li>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                
+                <!-- <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li> -->
+                <li><a href="mailto:hourahmed112@gmail.com">Contact Us</a></li>
+            </ul> 
+            <!-- <div class="sign">
+                <input type="text" placeholder="Search Labs" id="navSearch">
+                <button >
+                    <a href="#">Sign Up</a></p>
+                </button>
+                <button>
+                     <p><a href="#" class="s" onclick="openForm()">Sign In</a></p> -->
+                    <!-- <a href="#"> Sign In </a>
+                </button>
+            </div> -->
+            
+            
+            <button id="barIcon"><img src="{% static 'photos/bars.svg' %}"></button>   
+        </nav>
+
+
+        <div class="home">
+            <div id = "cenDiv">
+                
+                <div id="tableDiv">
+                    <h1> Add a PC to a specific Laboratory </h1>
+                    <br> <br>
+                    <form action = "" method = "POST">
+                        {% csrf_token %}
+    
+                        <div>
+    
+                            <label for = "Pc_id" class = "label1"> <p> Enter the PC ID </p> </label>
+                            <input required type = "number" min = "1" name = "pc_id" id = "Pc_id"  placeholder = "PC ID" required> 
+    
+                        </div>
+    
+                        <br> <br>
+    
+                        <div>
+    
+                            <label for = "lab_id" class = "label1"> <p> Enter the Laboratory ID </p> </label>
+                            <input required type = "number" min = "1" name = "lab_ID" id = "lab_id"  placeholder = "Laboratory ID" required>
+    
+                        </div>
+    
+                        <br> <br>
+    
+                        <div>
+     
+                            <p id = "status"> Status: </p>
+                            
+                            <br>
+    
+                            <div>
+    
+                                <input type = "radio" name = "Status1" id = "new" value = "New PC">
+                                <label for = "new"> New PC </label>
+    
+                            </div>
+    
+                            <br>
+    
+                            <div>
+    
+                                <input type = "radio" name = "Status2" id = "repaired" value = "Repaired PC">
+                                <label for = "repaired"> Repaired PC </label>
+    
+                            </div>
+    
+                        </div>
+    
+                        <br> 
+    
+                        <button type = "submit" class = "MyButtons" id = "sub"> save </button>
+                        <button type = "reset" class = "MyButtons"> reset </button>
+                    
+                    </form>
+    
+                </div>
+                <img src = "{% static 'photos/Add_PC.svg' %}" alt = "a pic">
+            
+            </div>
+
+            <div class="sideNav" id="sideNav">
+                 
+                <!-- <div id= showButton><img src="../images/showArrow.svg"> <title>show sidebar</title></div> -->
+                <div id="sideBar">
+                    <p><a href="{% url 'reportpc' %}">Report PC</a></p>
+                    <hr>
+                    <p><a href="{% url 'add pc' %}">Add PC</a></p>
+                    <hr>
+        
+                    <p><a href="{% url 'add lab' %}">Add Lab</a></p>
+                    <hr>
+                    <p><a href="{% url 'search' %}">Search</a></p>
+                    <hr>
+                    <p ><a href="{% url 'pcrepair' %}">PC Repair</a></p>
+                    <hr>
+                    <p><a href="{% url 'editlab' %}">Edit Lab</a></p>
+                    
+                </div>
+        </div>
+
+        
+        <!-- <div class="form-popup" id="myForm">
+            <form name="form1"  action="/action_page.php" class="form-container">
+
+                <h1>Sign In</h1>
+          
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email"  id="e"  name='text1' required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            
+                <button  onclick="ValidateEmail(document.form1.text1)" class="btn">Login</button>
+                
+                <input type="checkbox" checked="checked"id="ch" value="Remember" name="remember"> remember
+                
+              
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+            </form>
+        </div>    -->
+        <!-- <script src="../js_files/Sign_In.js"></script> -->
+        <script src="{% static 'js/add_pc/Add_PC.js' %}"></script>
+        <script src="{% static 'js/home/home.js' %}"></script>
+    </body>
+
+</html>

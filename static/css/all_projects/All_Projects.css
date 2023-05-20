@@ -1,0 +1,64 @@
+body.home{
+    background-image:url("https://i.pinimg.com/600x315/91/69/fd/9169fd5065d64d8aaeb2747d6154c858.jpg");
+}
+#human{
+    background-origin:padding-box;
+    text-size-adjust: 100px;
+    box-sizing: content-box;
+    font-size: larger;
+    color: rgb(22, 22, 22);
+    background-color: rgb(27, 202, 225);
+    text-align: center;
+    text-decoration: underline;
+
+}
+#studies{
+    background-origin:padding-box;
+    text-size-adjust: 100px;
+  box-sizing: content-box;
+  font-size: larger;
+  color: rgb(22, 22, 22);
+  background-color: rgb(27, 202, 225);
+  text-align: center;
+  text-decoration: underline;
+}
+#student
+{
+    background-origin:padding-box;
+    text-size-adjust: 100px;
+    box-sizing: content-box;
+    font-size: larger;
+    color: rgb(22, 22, 22);
+    background-color: rgb(27, 202, 225);
+    text-align: center;
+    text-decoration: underline;
+    
+}
+
+#lab{
+    background-origin: padding-box;
+    text-size-adjust: 100px;
+    box-sizing : content-box;
+    font-size: larger;
+    color: rgb(22, 22, 22);
+    background-color: rgb(27, 202, 225);
+    text-align: center;
+} 
+a:link{
+    color: #1e1f1d;
+}
+a:visited{
+    color: #171717;
+}
+a:hover {
+    color: #FF00FF;
+    }
+a:active {
+    color: #0000FF;
+    }
+#page{
+    color: aliceblue;
+    text-align: left;
+    font-size: xx-large;
+    font-weight: bold;
+    }

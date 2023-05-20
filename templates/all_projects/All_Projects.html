@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+    <head>
+        <title>Home page</title>
+        <link rel="stylesheet" href="{% static 'css/all_projects/All_Projects.css' %}">
+    </head>
+
+    <body class="home" >
+    
+        <div id="demo"> 
+            <h1 id="page" > <img id="i" width="150" src="https://cdn-icons-png.flaticon.com/128/4394/4394041.png"> Home Page </h1>
+        </div>
+
+
+        
+        
+        <center>
+            <button id="lab" ><a  href="{% url 'homepage' %}"><h1>Laboratory Tracking Website</h1></a>
+            </button><br>
+            <button id="human" ><h1>Human Resources</h1></button><br>
+            <button id="student" ><h1>Students Affairs</h1></button><br>
+
+        <button id="studies" ><h1> Higher Studies</h1></button><br>
+        </center>
+    </body>
+
+</html>

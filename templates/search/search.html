@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{%load static%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/search/search_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home/Home.css' %}">
+
+    <title>search labs</title>
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap" rel="stylesheet">
+    
+    <nav>
+        <div id="logoPic">
+            <img src="{% static 'photos/logo.svg' %}"
+            height="60" width="70">
+            <!-- Computer Labs -->
+        </div>
+        
+        <ul class="navUL">
+            <li><a href="{% url 'search' %}">Search</a></li>
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            
+            <!-- <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li> -->
+            <li><a href="mailto:hourahmed112@gmail.com">Contact Us</a></li>
+        </ul> 
+        <!-- <div class="sign">
+            <input type="text" placeholder="Search Labs" id="navSearch">
+            <button >
+                <a href="#">Sign Up</a></p>
+            </button>
+            <button>
+                 <p><a href="#" class="s" onclick="openForm()">Sign In</a></p> -->
+                <!-- <a href="#"> Sign In </a>
+            </button>
+        </div> -->
+        
+        
+        <button id="barIcon"><img src="{% static 'photos/bars.svg' %}"></button>   
+    </nav>
+    <div class="home">
+        <div id="searchPlace">
+            <input id= "engine" type="text" placeholder="Search Labs">
+            <div id="searchIcon"> <a href="#" ></a> <img src="{% static 'photos/searchIcon.svg' %}"> </div>
+    
+        </div>
+        <div class="sideNav" id="sideNav">
+                 
+            <!-- <div id= showButton><img src="../images/showArrow.svg"> <title>show sidebar</title></div> -->
+            <div id="sideBar">
+                <p><a href="{% url 'reportpc' %}">Report PC</a></p>
+                <hr>
+                <p><a href="{% url 'add pc' %}">Add PC</a></p>
+                <hr>
+    
+                <p><a href="{% url 'add lab' %}">Add Lab</a></p>
+                <hr>
+                <p><a href="{% url 'search' %}">Search</a></p>
+                <hr>
+                <p ><a href="{% url 'pcrepair' %}">PC Repair</a></p>
+                <hr>
+                <p><a href="{% url 'editlab' %}">Edit Lab</a></p>
+                
+            </div>
+            <!-- <div id= hideButton><img src="../images/arrow.svg"><title>hideButton sidebar</title></div> -->
+            
+        </div>
+    </div>
+    <div id="tablediv">
+    <table class="container" id="container">
+        <!-- <h2>Responsive Tables Using LI <small>Triggers on 767px</small></h2> -->
+        <!-- <ul class="responsive-table"> -->
+          <tr class="table-header">
+            <th class="col col-1">Lab Name</th>
+            <th class="col col-2">Lab ID</th>
+            <th class="col col-3">Building Number</th>
+            <th class="col col-4">Floor Number</th>
+            <th class="col col-5">Number of PCs</th>
+            <th class="col col-6">Number of Chairs</th>
+            <th class="col col-7">Lab Capacity</th>
+            <th class="col col-8">Status</th>
+          </tr>
+            <!-- </li> -->
+        <!-- {% for x in lab%}
+        <tr class="table-row">
+        <td class="col col-1" data-label="labName">{{x.labName}}</td>
+        <td class="col col-2" data-label="labId">{{x.labID}}</td>
+        <td class="col col-3" data-label="buildingNum">{{x.buildingNum}}</td>
+        <td class="col col-4" data-label="floorNum">{{x.floorNum}}</td>
+        <td class="col col-5" data-label="numOfPC">{{x.numOfPC}}</td>
+        <td class="col col-6" data-label="numberOfChair">{{x.numberOfChair}}</td>
+        <td class="col col-7" data-label="labCapacity">{{x.labCapacity}}</td>
+        <td class="col col-8" data-label="Status">{{x.Status}}</td>
+        </tr>
+        {% endfor %} -->
+        <!-- <li class="table-row">
+            <div class="col col-1" data-label="labName">42235</div>
+            <div class="col col-2" data-label="labId">John Doe</div>
+            <div class="col col-3" data-label="buildingNum">$350</div>
+            <div class="col col-4" data-label="floorNum">Pending</div>
+            <div class="col col-5" data-label="numOfPC">Pending</div>
+            <div class="col col-6" data-label="numberOfChair">Pending</div>
+            <div class="col col-7" data-label="labCapacity">Pending</div>
+            <div class="col col-8" data-label="Status">Pending</div>
+          </li> -->
+          
+        <!-- </ul> -->
+    </table>
+    
+    </div>
+        
+    
+ <script src="{% static 'js/home/home.js' %}"></script>
+ <script src="{% static 'js/search/search.js' %}"></script>
+    
+</body>
+</html>
